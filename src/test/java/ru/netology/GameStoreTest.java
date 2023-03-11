@@ -80,5 +80,20 @@ public class GameStoreTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testGetMostOnePlayer() {
+        GameStore store = new GameStore();
+
+        store.addPlayTime("Ivan", 9);
+        store.addPlayTime("Ruslan", 5);
+        store.addPlayTime("Petr", 10);
+        store.addPlayTime("Alex", 8);
+        store.addPlayTime("Oleg", 7);
+
+        String expected = "Petr";
+        String actual = store.getMostPlayer();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
 }
