@@ -36,6 +36,7 @@ public class Player {
             playedTime.put(game, playedTime.get(game));
         } else {
             playedTime.put(game, hours);
+//            throw new RuntimeException("Эта игра не была установлена");
         }
         return playedTime.get(game);
     }
