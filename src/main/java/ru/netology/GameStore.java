@@ -32,6 +32,7 @@ public class GameStore {
     public boolean containsGame(Game game) {
         for (int i = 0; i < games.size(); i++) {   // исправлен цикл for
             if (games.get(i).equals(game)) {
+
                 return true;
             }
         }
@@ -73,6 +74,10 @@ public class GameStore {
      * за играми этого каталога
      */
     public int getSumPlayedTime() {
-        return 0;
+        int sum = 0;
+        for (int value : playedTime.values()) {
+            sum += value;
+        }
+        return sum;
     }
 }
